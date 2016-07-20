@@ -10,7 +10,7 @@
 
 </head>
 
-<body ng-controller="myCtrl">
+<body>
     <h1> Waitstaff Calculator</h1>
     <!--
 <h1>Type your cat name</h1>
@@ -18,19 +18,19 @@
 <h4>{{catName}}</h4>
 -->
     <div class="rightSide">
-        <form action="submit">
+        <form action="submit" ng-submit="submitDetails()" novalidate>
             <h2>Enter the Meal Details</h2>
             <div>
-                <label for="baseMealPrice"> Base Meal Price</label>
-                <input type="number" />
+                <label for="baseMealPrice"> Base Meal Price: $</label>
+                <input ng-model="mealPrice" required type="number" step="0.01" />
             </div>
             <div>
                 <label for="taxRate">Tax Rate: %</label>
-                <input type="number" />
+                <input ng-model="taxRate" required step="0.05" type="number" />
             </div>
             <div>
                 <label for="tipPercentage">Tip Percentage: %</label>
-                <input type="number" />
+                <input ng-model="tipPercentage" required step="0.1" type="number" />
             </div>
 
             <div class="formButton">
@@ -41,15 +41,16 @@
             <div class="CustomerCharges">
                 <h2>Customer Charges</h2>
                 <label for="subtotal">Subtotal</label>
-                <input type="number">
+                <span>{{subtotal | number:2}}</span>
             </div>
             <div>
                 <label for="tip">Tip</label>
-                <input type="number">
+                <span>{{tip | number:2}}</span>
+                <hr>
             </div>
             <div>
                 <label for="total">Total</label>
-                <input type="number">
+                <span>{{total | number:2}}</span>
             </div>
 
             <h2> My Earnings Info</h2>
