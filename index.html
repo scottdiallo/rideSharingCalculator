@@ -12,7 +12,7 @@
 
 <body>
     <div class="container" ng-controller="waitCtrl">
-        <h1> Waitstaff Calculator Basic</h1>
+        <h1 class="subHeroTitle"> Waitstaff Calculator Basic</h1>
         <div class="mealDetails leftSide borderDiv">
             <h3>Enter the Meal Details</h3>
             <form name="enterPriceForm" ng-submit="submitDetails()" novalidate>
@@ -39,7 +39,7 @@
 
         <div class="rightSide">
             <div class="customerCharges borderDiv">
-                <h3>Customer Charges</h3>
+                <h3 class="customerChargesHeader">Customer Charges</h3>
                 <div>
                     <label>Subtotal: </label><span>{{subtotal | number:2}}</span></div>
                 <div>
@@ -47,18 +47,18 @@
                 </div>
                 <hr>
                 <div>
-                    <label>Total</label><span>{{total | number:2</span>
+                    <label>Total: </label><span>{{total | number:2}}</span>
                 </div>
                 <div class="earningsInfo borderDiv">
-                    <h3>My Earnings Info</h3>
+                    <h3 class="earningsInfoHeader">My Earnings Info</h3>
                     <div>
-                        <label>Tip Total:</label><span>{{tipTotal | number:2}}</span>
+                        <label>Tip Total: </label><span>{{tipTotal | number:2}}</span>
                     </div>
                     <div>
-                        <label>Meal Count:</label><span>{{mealCount | number:0}}</span>
+                        <label>Meal Count: </label><span>{{mealCount | number:0}}</span>
                     </div>
                     <div>
-                        <label>Avg Tip Per Meal:</label><span>{{avgTipPerMeal | number:2}}</span>
+                        <label>Avg Tip Per Meal: </label><span>{{avgTipPerMeal | number:2}}</span>
                     </div>
                 </div>
                 <button id="resetButton" ng-click="init()">Reset All</button>

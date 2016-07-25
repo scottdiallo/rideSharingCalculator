@@ -1,0 +1,30 @@
+body {
+    background-color: beige;
+    word-spacing: 2px
+}
+
+h1 {
+    text-align: center;
+}
+
+.mealDetails {
+    border: 3px solid black;
+    padding: 8px;
+}
+
+#submit,
+#cancel {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-top: 15px;
+}
+
+.customerChargesHeader,
+.earningsInfoHeader,
+h1 {
+    font-size: 2em
+}
+
+.customerCharges {
+    text-align: center;
+}
