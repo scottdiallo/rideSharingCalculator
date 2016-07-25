@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myModule">
+<html lang="en" ng-app="waitstaff">
 
 <head>
     <meta charset="UTF-8">
@@ -11,69 +11,61 @@
 </head>
 
 <body>
-    <h1> Waitstaff Calculator</h1>
-    <!--
-<h1>Type your cat name</h1>
-<input type="text" ng-model="catName">
-<h4>{{catName}}</h4>
--->
-    <div class="rightSide">
-        <form action="submit" ng-submit="submitDetails()" novalidate>
-            <h2>Enter the Meal Details</h2>
-            <div>
-                <label for="baseMealPrice"> Base Meal Price: $</label>
-                <input ng-model="mealPrice" required type="number" step="0.01" />
-            </div>
-            <div>
-                <label for="taxRate">Tax Rate: %</label>
-                <input ng-model="taxRate" required step="0.05" type="number" />
-            </div>
-            <div>
-                <label for="tipPercentage">Tip Percentage: %</label>
-                <input ng-model="tipPercentage" required step="0.1" type="number" />
-            </div>
+    <div class="container" ng-controller="waitCtrl">
+        <h1> Waitstaff Calculator Basic</h1>
+        <div class="mealDetails leftSide borderDiv">
+            <h3>Enter the Meal Details</h3>
+            <form name="enterPriceForm" ng-submit="submitDetails()" novalidate>
+                <div>
+                    <label for="mealPrice">Base Meal Price: $</label>
+                    <input type="number" ng-model="mealPrice" required step="0.01" />
+                </div>
+                <div>
+                    <label for="taxRate">Tax Rate: %</label>
+                    <input type="number" ng-model="taxRate" required step="0.05" />
+                </div>
+                <div>
+                    <label for="tipPercentage">Tip Percentage: %</label>
+                    <input type="number" ng-model="tipPercentage" required step="0.1" />
+                </div>
+                <div class="error" ng-model="formError != ''">Please enter in valid values for the form
+                </div>
+                <div class="inputButtons">
+                    <button id="submit">Submit</button>
+                    <button ng-click="resetDetails()" id="cancel">Cancel</button>
+                </div>
+            </form>
+        </div>
 
-            <div class="formButton">
-                <button type="submit">Submit</button>
-                <button class="cancel"> Cancel</button>
-            </div>
-
-            <div class="CustomerCharges">
-                <h2>Customer Charges</h2>
-                <label for="subtotal">Subtotal</label>
-                <span>{{subtotal | number:2}}</span>
-            </div>
-            <div>
-                <label for="tip">Tip</label>
-                <span>{{tip | number:2}}</span>
+        <div class="rightSide">
+            <div class="customerCharges borderDiv">
+                <h3>Customer Charges</h3>
+                <div>
+                    <label>Subtotal: </label><span>{{subtotal | number:2}}</span></div>
+                <div>
+                    <label>Tip: </label><span>{{tip | number:2}}</span>
+                </div>
                 <hr>
-            </div>
-            <div>
-                <label for="total">Total</label>
-                <span>{{total | number:2}}</span>
+                <div>
+                    <label>Total</label><span>{{total | number:2</span>
+                </div>
+                <div class="earningsInfo borderDiv">
+                    <h3>My Earnings Info</h3>
+                    <div>
+                        <label>Tip Total:</label><span>{{tipTotal | number:2}}</span>
+                    </div>
+                    <div>
+                        <label>Meal Count:</label><span>{{mealCount | number:0}}</span>
+                    </div>
+                    <div>
+                        <label>Avg Tip Per Meal:</label><span>{{avgTipPerMeal | number:2}}</span>
+                    </div>
+                </div>
+                <button id="resetButton" ng-click="init()">Reset All</button>
             </div>
 
-            <h2> My Earnings Info</h2>
-            <div class="myEarningsInfo">
-                <div>
-                    <label for="tipToal">Tip Total</label>
-                    <input type="number">
-                </div>
-                <div>
-                    <label for="mealCount">Meal Count</label>
-                    <input type="number">
-                </div>
-                <div>
-                    <label for="averageTipPerMeal">Average Tip Per Meal</label>
-                    <input type="number">
-                </div>
-            </div>
-            <button type="submit" id="reset">reset</button>
-        </form>
-    </div>
 
-
-    <script src="js/app.js"></script>
+            <script src="js/app.js"></script>
 </body>
 
 </html>
