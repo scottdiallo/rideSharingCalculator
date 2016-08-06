@@ -1,4 +1,4 @@
-var myApp = angular.module('waitstaff', []);
+var myApp = angular.module('waitstaff', ['ngAnimate']);
 
 myApp.controller('waitCtrl', ['$scope', function ($scope) {
 
