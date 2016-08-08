@@ -5,19 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>WaitStaff Calculator</title>
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="home.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script type="text/javascript" src="https://code.angularjs.org/1.5.6/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-route.js"></script>
 
 </head>
 
-<body ng-app="myApp">
-    <ul>
-        <li><a href="#/details">Home</a></li>
-        <li><a href="#/charges">New Meal</a></li>
-        <li><a href="#/earnings">My Earnings Info</a></li>
-    </ul>
+<body>
+    <div class="nav" ng-controller="navCtrl">
+        <ul>
+            <li><a href="#/details">Home</a></li>
+            <li><a href="#/charges">New Meal</a></li>
+            <li><a href="#/earnings">My Earnings Info</a></li>
+        </ul>
+    </div>
+    <div class="content" ng-view></div>
+    <div class="lower" ng-controller="resetCtrl"></div>
+    <button ng-click="resetAll()">Reset All</button>
     <div class="container" ng-controller="waitCtrl">
         <h1 class="subHeroTitle"> Waitstaff Calculator Basic</h1>
         <div class="mealDetails leftSide borderDiv">
@@ -47,7 +53,7 @@
 
 
 
-
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
         <script src="app.js"></script>
 </body>
 
