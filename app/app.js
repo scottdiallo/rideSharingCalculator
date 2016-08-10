@@ -135,7 +135,7 @@ app.controller('chargesController', function ($scope, mealDataService) {
     // forward button functionality on click - navigates all meals added
     $scope.forward = function () {
         // console.log($scope.mealCount);
-        if ($scope.mealCount < $scope.meal.length) {
+        if ($scope.mealCount < $scope.meals.length) {
             $scope.mealCount++;
         }
     };
