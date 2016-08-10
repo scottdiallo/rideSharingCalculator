@@ -1,4 +1,4 @@
-var myApp = angular.module('waitstaff', ['ngAnimate']);
+var app = angular.module('waitstaff', ['ngAnimate', 'ngRoute']);
 
 //define all routes below
 app.config(['$routeProvider', function ($routeProvider) {
@@ -19,7 +19,6 @@ app.config(['$routeProvider', function ($routeProvider) {
             redirectTo: '/details'
         });
 }]);
-
 
 app.service('mealDataService', function () {
     //empty arrays for meals
@@ -57,7 +56,7 @@ app.service('mealDataService', function () {
     };
 });
 
-app.controller('detailscontroller', function ($scope, mealDataService) {
+app.controller('detailsController', function ($scope, mealDataService) {
     $scope.mealCount = 1;
     //get the current meal count when naviating from other view
     $scope.getMealCounts = function () {
@@ -86,11 +85,10 @@ app.controller('detailscontroller', function ($scope, mealDataService) {
 
         //collecting data form current meal prior to sending to service array
         $scope.currentSubtotal = price + (price * (tax / 100));
-        $scope.currentTotal = $scope.currentSubtotal + $scope.curentTip;
 
         //the tip is not including the tax
         $scope.currentTip = price * (tip / 100);
-        $scope.currentTotal = $scope.currentTotal + $scope.currentTip;
+        $scope.currentTotal = $scope.currentSubtotal + $scope.currentTip;
 
         //sending current meal to array of meals in service
         var meal = {
@@ -98,6 +96,7 @@ app.controller('detailscontroller', function ($scope, mealDataService) {
             tip: $scope.currentTip,
             total: $scope.currentTotal
         };
+        console.log(meal);
         mealDataService.addMeal(meal);
 
         //clearing fields for next meal input
@@ -110,7 +109,7 @@ app.controller('chargesController', function ($scope, mealDataService) {
     $scope.getMeals = function () {
         var meals = mealDataService.getMeals();
         $scope.meals = meals;
-        console.log($scope.meals);
+        // console.log($scope.meals);
     };
 
     $scope.getMeals();
@@ -127,7 +126,7 @@ app.controller('chargesController', function ($scope, mealDataService) {
 
     //back button functionality on click - navigates all meals added
     $scope.back = function () {
-        console.log($scope.mealCount);
+        // console.log($scope.mealCount);
         if ($scope.mealCount > 1) {
             $scope.mealCount--;
         }
@@ -135,7 +134,7 @@ app.controller('chargesController', function ($scope, mealDataService) {
 
     // forward button functionality on click - navigates all meals added
     $scope.forward = function () {
-        console.log($scope.mealCount);
+        // console.log($scope.mealCount);
         if ($scope.mealCount < $scope.meal.length) {
             $scope.mealCount++;
         }
@@ -145,8 +144,8 @@ app.controller('chargesController', function ($scope, mealDataService) {
 
 app.controller('earningsController', function ($scope, mealDataService) {
     $scope.tipTotal = mealDataService.getCumulativeData().tipTotal;
-    $scope.mealCount = mealDataService().mealCount;
-    $scope.tipAvg = mealDataService().tipAvg;
+    $scope.mealCount = mealDataService.getCumulativeData().mealCount;
+    $scope.tipAvg = mealDataService.getCumulativeData().tipAvg;
 });
 
 app.controller('resetCtrl', function ($scope, mealDataService) {

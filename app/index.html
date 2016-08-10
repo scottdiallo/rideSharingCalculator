@@ -7,54 +7,29 @@
     <title>WaitStaff Calculator</title>
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="home.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-    <script type="text/javascript" src="https://code.angularjs.org/1.5.6/angular-animate.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-route.js"></script>
+
 
 </head>
 
 <body>
     <div class="nav" ng-controller="navCtrl">
         <ul>
-            <li><a href="#/details">Home</a></li>
-            <li><a href="#/charges">New Meal</a></li>
+            <li><a href="#/details">Meal Details</a></li>
+            <li><a href="#/charges">Charges Overview</a></li>
             <li><a href="#/earnings">My Earnings Info</a></li>
         </ul>
     </div>
     <div class="content" ng-view></div>
-    <div class="lower" ng-controller="resetCtrl"></div>
-    <button ng-click="resetAll()">Reset All</button>
-    <div class="container" ng-controller="waitCtrl">
-        <h1 class="subHeroTitle"> Waitstaff Calculator Basic</h1>
-        <div class="mealDetails leftSide borderDiv">
-            <h3>Enter the Meal Details</h3>
-            <form name="enterPriceForm" ng-submit="submitDetails()" novalidate>
-                <div>
-                    <label for="mealPrice">Base Meal Price: $</label>
-                    <input type="number" ng-model="mealPrice" required step="0.01" />
-                </div>
-                <div>
-                    <label for="taxRate">Tax Rate: %</label>
-                    <input type="number" ng-model="taxRate" required step="0.05" />
-                </div>
-                <div>
-                    <label for="tipPercentage">Tip Percentage: %</label>
-                    <input type="number" ng-model="tipPercentage" required step="0.1" />
-                </div>
-                <div class="error" ng-model="formError != ''">Please enter in valid values for the form
-                </div>
-                <div class="inputButtons">
-                    <button id="submit">Submit</button>
-                    <button ng-click="resetDetails()" id="cancel">Cancel</button>
-                </div>
+    <div class="lower" ng-controller="resetCtrl">
+        <button ng-click="resetAll()">Reset All</button>
+    </div>
 
-            </form>
-        </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
-
-
-        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-        <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.5.6/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-route.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
