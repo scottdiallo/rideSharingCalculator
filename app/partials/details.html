@@ -14,6 +14,10 @@
             <label for="tip">Tip Percentage: %</label>
             <input type="number" class="form-control" name="tip" ng-model="tip" placeholder="0.00" min="0" max="100" step=".01" required/>
         </div>
+        <div class="form-group">
+            <label for="Commission">Uber|Lyft Commission: %</label>
+            <input type="number" class="form-control" name="commission" placeholder="0.00" ng-model="commission" min="0" max="100" step=".01" />
+        </div>
         <div>
             <button class="addRideBtn" type="submit">Add Ride</button>
             <button type="reset" ng-click="cancelForm()" class="cancelBtn">Cancel</button>
