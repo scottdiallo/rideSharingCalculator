@@ -1,7 +1,7 @@
 <div class="table">
     <h3>Overview for Ride {{rideCount}}:</h3>
-    <button ng-click="back()" class="btn btn-default btn-sm">Previous Ride</button>
-    <button ng-click="forward()" class="btn btn-default btn-sm">Next Ride</button>
+    <button ng-click="back()" class="previousBtn">Previous Ride</button>
+    <button ng-click="forward()" class="nextRideBtn">Next Ride</button>
     <br>
     <div>
         <h4>Subtotal: <em><span ng-repeat="ride in rides" ng-show="$index==(rideCount-1)">{{ride.subtotal | currency}}</span></em></h4>
