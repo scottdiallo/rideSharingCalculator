@@ -1,4 +1,4 @@
-<div class="table">
+<div class="table, charges">
     <h3>Overview for Ride {{rideCount}}:</h3>
     <button ng-click="back()" class="previousBtn">Previous Ride</button>
     <button ng-click="forward()" class="nextRideBtn">Next Ride</button>
@@ -6,7 +6,10 @@
     <div>
         <h4>Subtotal: <em><span ng-repeat="ride in rides" ng-show="$index==(rideCount-1)">{{ride.subtotal | currency}}</span></em></h4>
         <h4>Tip: <em><span  ng-repeat="ride in rides" ng-show="$index==(rideCount-1)">{{ride.tip | currency}}</span></em></h4>
+        <h4>Commission:<em><span  ng-repeat="commission in commissions" ng-show="$index==(rideCount-1)">{{ride.total | currency}}</span></em></h4>
+
         <hr>
         <h4>Total:<em><span  ng-repeat="ride in rides" ng-show="$index==(rideCount-1)">{{ride.total | currency}}</span></em></h4>
+
     </div>
 </div>

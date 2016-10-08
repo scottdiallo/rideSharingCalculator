@@ -74,6 +74,9 @@ app.controller('detailsController', function ($scope, rideDataService) {
         $scope.price = '';
         $scope.tax = '';
         $scope.tip = '';
+        $scope.commission = '';
+
+
     };
 
     //Add the ride when 'Add ride' Is clicked
@@ -82,14 +85,16 @@ app.controller('detailsController', function ($scope, rideDataService) {
         var price = parseFloat($scope.price);
         var tax = parseFloat($scope.tax);
         var tip = parseFloat($scope.tip);
+        var commission = parseFloat($scope.commission);
+
 
         //collecting data form current ride prior to sending to service array
         $scope.currentSubtotal = price + (price * (tax / 100));
 
         //the tip is not including the tax
         $scope.currentTip = price * (tip / 100);
-        $scope.currentTotal = $scope.currentSubtotal + $scope.currentTip;
-
+        console.log($scope.commission);
+        $scope.currentTotal = ($scope.currentSubtotal + $scope.currentTip) * (1 + ($scope.commission / 100));
         //sending current ride to array of rides in service
         var ride = {
             subtotal: $scope.currentSubtotal,
