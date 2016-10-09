@@ -1,7 +1,7 @@
-<div class="table, details">
+<div class="table details">
     <h3>Enter Ride Details {{rideCount}}:</h3>
     <br>
-    <form ng-submit="addTransaction(); results=true; counter=true">
+    <form class="rideDetailsForm" ng-submit="addTransaction(); results=true; counter=true">
         <div class="form-group">
             <label for="price">Base Ride Price: $</label>
             <input type="number" class="form-control" name="price" ng-model="price" min="0" step=".01" placeholder="0.00" required/>
@@ -14,12 +14,7 @@
             <label for="tip">Tip Percentage: %</label>
             <input type="number" class="form-control" name="tip" ng-model="tip" placeholder="0.00" min="0" max="100" step=".01" required/>
         </div>
-        <!--
-        <div class="form-group">
-            <label for="Commission">Uber|Lyft Commission: %</label>
-            <input type="number" class="form-control" name="commission" ng-model="commission" ng-init="commission='25'" value="25" />
-        </div>
--->
+
         <div class="allBtn">
             <button class="addRideBtn" type="submit">Add Ride</button>
             <button type="reset" ng-click="cancelForm()" class="cancelBtn">Cancel</button>

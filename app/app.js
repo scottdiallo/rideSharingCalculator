@@ -89,7 +89,7 @@ app.controller('detailsController', function ($scope, rideDataService) {
 
 
         //collecting data form current ride prior to sending to service array
-        $scope.currentSubtotal = price + (price * (tax / 100));
+        $scope.currentSubtotal = price + (price * (commission / 100));
 
         //the tip is not including the tax
         $scope.currentTip = price * (tip / 100);
