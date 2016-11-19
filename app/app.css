@@ -4,7 +4,10 @@
      margin: 0;
      font-family: helveitca neue;
      position: absolute;
+
 } 
+
+
 .module {
       width: 100%;
     height: 100vh;
@@ -21,7 +24,6 @@
   font-size: 2rem;
     border: 1px solid white;
     border-color: transparent;
-    margin-top: 3rem;
     z-index: 2;
     position: absolute;
     margin-left: 17%;
@@ -84,32 +86,117 @@ a:visited{
     body{
         background:#2980b9;
     }
-   
+    #lol-emoji{
+      display:
+    }
+    #lol-emoji img{
+      padding-top: 78px;
+    margin-left: 13%;
+    height: 300px;
+    width: 300px;
+}
+#lol-emoji p{
+    font-size: 2.7rem;
+    text-align: center;
+    font-family: monospace;
+}
+.module{
+  display: none;
+}
  
 }
 @media (min-width:451px) and (max-width:540px) {
+  #lol-emoji{
+  display: none;
+}
     body{
         background:#8e44ad;
     }
+.content {
+    margin-top: -45%;
+    margin-left: 20%;
+}
+.nav{
+    font-size: 1.2rem;
+        margin-left: 0%;
+}
+.nav ul li {
+       padding: 0px;
+    }
+.table{
+        min-width: 20rem;
+}
+.content {
+    margin-top: -47%;
+    margin-left: 11%;
+}
+
 }
 @media (min-width:541px) and (max-width:768px) {
+    #lol-emoji{
+  display: none;
+}
     body{
         background:#27ae60;
     }
+    .content {
+    margin-top: -45%;
+    margin-left: 20%;
+}
+.nav{
+font-size: 1.3rem;
+margin-left: 0px;
+}
+.table{
+          position: absolute;
+    text-align: center;
+    opacity: 0.67;
+    /* min-height: 15rem; */
+    min-width: 27rem;
+    font-size: 1.2rem;
+    word-spacing: 2px;
+    /* line-height: 1; */
+    border-radius: .5em;
+    color: white;
+}
+.content {
+    margin-top: -47%;
+    margin-left: 11%;
+}
 
 }
 
 @media (min-width:769px) and (max-width:1024px) {
+  #lol-emoji{
+  display: none;
+}
    body{
         background:#16a085;
     }
+    .content {
+    margin-top: -45%;
+    margin-left: 20%;
+}
+.nav{
+  font-size: 1.579rem;
+    margin-left: 5%;
+}
+.table{
+      min-width: 30rem;
+}
 }
 @media (min-width:1025px) and (max-width:1200px) {
+  #lol-emoji{
+  display: none;
+}
    body{
         background:#c0392b;
     }
 }
 @media (min-width:1201px){
+  #lol-emoji{
+  display: none;
+}
     body{
 /*        background:#ffd700;
 */    }
