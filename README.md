@@ -1,5 +1,6 @@
 # rideShareCalculator
 ##Thinkfful (http://thinkful.com) Portofolio Execerice - Angularjs and gulp implementation.
+![screen shot 2016-12-20 at 11 31 18 am](https://cloud.githubusercontent.com/assets/16064574/21365307/bba65df6-c6a9-11e6-9bf8-70dfb9871253.png)
 
 ## background
 I built this app in response of frustation ride share driver experience when working. there are no way the driver can see instantly how much they made after each ride. they always get a statement the following day. why not instantly?
