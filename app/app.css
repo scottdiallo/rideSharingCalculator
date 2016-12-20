@@ -1,65 +1,71 @@
- 
- body {
-     padding: 0;
-     margin: 0;
-     font-family: helveitca neue;
-     position: absolute;
-
-} 
-
+body {
+    padding: 0;
+    margin: 0;
+    font-family: helveitca neue;
+    position: absolute;
+}
 
 .module {
-      width: 100%;
+    width: 100%;
     height: 100vh;
-    
     background-size: cover;
 }
 
-.background-image{
-      width: 100%;
+.background-image {
+    width: 100%;
     background-color: black;
     opacity: 0.67;
+    height: 100vh;
 }
-.nav{
-  font-size: 2rem;
+
+.nav {
+    font-size: 2rem;
     border: 1px solid white;
     border-color: transparent;
     z-index: 2;
     position: absolute;
     margin-left: 17%;
-}  
-.nav ul{
 }
-.nav ul li{
+
+.nav ul {}
+
+.nav ul li {
     display: inline-block;
     display: inline-block;
     padding: 5px 10px;
     font-weight: bold;
+}
 
-}
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
-a :hover {
-    color: hotpink;
+
+a:hover {
+    text-decoration: underline;
 }
-.navigation ul li a{
-  padding-right: 15px;
+
+.navigation ul li a {
+    padding-right: 15px;
 }
-a:visited{
-  color: inherit;
+
+a:visited {
+    color: inherit;
 }
-.heroText{
+
+.heroText {
     padding: 0px;
     margin: 0px;
     position: absolute;
     z-index: 1
-  }        
-.content{
+}
+
+.content {
     margin-top: -51%;
-    margin-left: 30%;  
-      }
-    .charges, .table{
+    margin-left: 30%;
+}
+
+.charges,
+.table {
     background-color: black;
     position: absolute;
     text-align: center;
@@ -72,132 +78,145 @@ a:visited{
     line-height: 1;
     border-radius: .5em;
     color: white;
-    }
-    .ride-detail-header{
-      margin-bottom: -4%;
-    }
-    footer{
-      z-index: 1;
-      text-align: center;
-      margin-top: 12%;
-    }
-                        /*optimizing to be mobile responsive*/
-@media (max-width:450px) {
-    body{
-        background:#2980b9;
-    }
-    #lol-emoji{
-      display:
-    }
-    #lol-emoji img{
-      padding-top: 78px;
-    margin-left: 13%;
-    height: 300px;
-    width: 300px;
-}
-#lol-emoji p{
-    font-size: 2.7rem;
-    text-align: center;
-    font-family: monospace;
-}
-.module{
-  display: none;
-}
- 
-}
-@media (min-width:451px) and (max-width:540px) {
-  #lol-emoji{
-  display: none;
-}
-    body{
-        background:#8e44ad;
-    }
-.content {
-    margin-top: -45%;
-    margin-left: 20%;
-}
-.nav{
-    font-size: 1.2rem;
-        margin-left: 0%;
-}
-.nav ul li {
-       padding: 0px;
-    }
-.table{
-        min-width: 20rem;
-}
-.content {
-    margin-top: -47%;
-    margin-left: 11%;
 }
 
+.ride-detail-header {
+    margin-bottom: -4%;
 }
-@media (min-width:541px) and (max-width:768px) {
-    #lol-emoji{
-  display: none;
+
+footer {
+    z-index: 1;
+    text-align: center;
+    margin-top: 12%;
 }
-    body{
-        background:#27ae60;
+
+
+/*optimizing to be mobile responsive*/
+
+@media (max-width:450px) {
+    body {
+        background: #2980b9;
+    }
+    #lol-emoji {
+        display:
+    }
+    #lol-emoji img {
+        padding-top: 78px;
+        margin-left: 13%;
+        height: 300px;
+        width: 300px;
+    }
+    #lol-emoji p {
+        font-size: 2.7rem;
+        text-align: center;
+        font-family: monospace;
+    }
+    .module {
+        display: none;
+    }
+}
+
+@media (min-width:451px) and (max-width:540px) {
+    #lol-emoji {
+        display: none;
+    }
+    /*body{
+        background:#8e44ad;
+    }*/
+    .content {
+        margin-top: -45%;
+        margin-left: 20%;
+    }
+    .nav {
+        font-size: 1.2rem;
+        margin-left: 0%;
+    }
+    .nav ul li {
+        padding: 0px;
+    }
+    .table {
+        min-width: 20rem;
     }
     .content {
-    margin-top: -45%;
-    margin-left: 20%;
-}
-.nav{
-font-size: 1.3rem;
-margin-left: 0px;
-}
-.table{
-          position: absolute;
-    text-align: center;
-    opacity: 0.67;
-    /* min-height: 15rem; */
-    min-width: 27rem;
-    font-size: 1.2rem;
-    word-spacing: 2px;
-    /* line-height: 1; */
-    border-radius: .5em;
-    color: white;
-}
-.content {
-    margin-top: -47%;
-    margin-left: 11%;
+        margin-top: -112%;
+     }
 }
 
+@media (min-width:541px) and (max-width:768px) {
+    #lol-emoji {
+        display: none;
+    }
+    /*body{
+        background:#27ae60;
+    }*/
+
+    .navigation{
+        /*margin-top: -92%;*/
+        margin-left: 11%;
+    }
+    .nav{
+        padding-left: 13px;
+    }
+    .content {
+        margin-top: -92%;
+        margin-left: 11%;
+     }
+    .nav {
+        font-size: 1.3rem;
+        margin-left: 0px;
+    }
+    .table {
+        position: absolute;
+        text-align: center;
+        opacity: 0.67;
+        /* min-height: 15rem; */
+        min-width: 27rem;
+        font-size: 1.2rem;
+        word-spacing: 2px;
+        /* line-height: 1; */
+        border-radius: .5em;
+        color: white;
+    }
+    .content {
+        margin-left: 11%;
+    }
 }
 
 @media (min-width:769px) and (max-width:1024px) {
-  #lol-emoji{
-  display: none;
-}
-   body{
+    #lol-emoji {
+        display: none;
+    }
+    /*body{
         background:#16a085;
-    }
+    }*/
     .content {
-    margin-top: -45%;
-    margin-left: 20%;
-}
-.nav{
-  font-size: 1.579rem;
-    margin-left: 5%;
-}
-.table{
-      min-width: 30rem;
-}
-}
-@media (min-width:1025px) and (max-width:1200px) {
-  #lol-emoji{
-  display: none;
-}
-   body{
-        background:#c0392b;
+        margin-left: 20%;
+        margin-top: -70%;
+    }
+    .nav {
+        font-size: 1.579rem;
+        margin-left: 5%;
+    }
+    .table {
+        min-width: 30rem;
     }
 }
-@media (min-width:1201px){
-  #lol-emoji{
-  display: none;
+
+@media (min-width:1025px) and (max-width:1200px) {
+    #lol-emoji {
+        display: none;
+    }
+    /*body{
+        background:#c0392b;
+    }*/
 }
-    body{
-/*        background:#ffd700;
-*/    }
+
+@media (min-width:1201px) {
+    #lol-emoji {
+        display: none;
+    }
+    body {
+        /*        background:#ffd700;
+*/
+    }
 }
